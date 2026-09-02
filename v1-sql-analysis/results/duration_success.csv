@@ -1,0 +1,7 @@
+duration_bucket,total_campaigns,successful_campaigns,success_rate_pct
+<= 7 days,3007,1389,46.2
+8-14 days,9433,5093,54.0
+15-30 days,198991,79971,40.2
+31-60 days,115420,45634,39.5
+61-90 days,4357,1726,39.6
+> 90 days,467,143,30.6
