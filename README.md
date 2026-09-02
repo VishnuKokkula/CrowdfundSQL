@@ -1,39 +1,55 @@
 # CrowdfundSQL
 
-A data analytics project exploring what factors are associated with Kickstarter campaign success using SQL and SQLite.
+A data analytics project exploring the factors associated with **Kickstarter campaign success** using **SQL and SQLite**.
 
-## V1 — SQL Analysis
+---
 
-The first version analyzes the Kickstarter Projects dataset (`ks-projects-201801.csv`) containing 378,661 campaigns.
+## 📌 Current Version: v1 — SQL Analysis
 
-For the primary analysis, only campaigns with resolved outcomes were included:
+### Project Overview
+
+The first version analyzes the **Kickstarter Projects dataset** from `ks-projects-201801.csv`. The dataset contains **378,661 campaigns**.
+
+For the main analysis, I included only campaigns with a resolved outcome:
 
 - `successful`
+
 - `failed`
 
-This resulted in 331,675 campaigns.
+After filtering out campaigns without a resolved outcome, the analysis included **331,675 campaigns**.
 
-### Analysis
+---
 
-V1 investigates four questions:
+## 🔍 Analysis Questions
+
+V1 focuses on four questions:
 
 1. Which Kickstarter categories have the highest success rates?
-2. How does funding goal size relate to campaign success?
-3. How does campaign duration relate to success?
-4. Does launch month show meaningful differences in success rates?
 
-### Key Findings
+1. How is funding goal size associated with campaign success?
 
-- Campaigns with goals below **$1K** had a **55.1%** success rate, compared with **3.4%** for campaigns with goals of **$500K+**.
-- **Dance** had the highest observed category success rate at **65.4%**, while **Technology** had the lowest at **23.8%**.
-- Campaigns lasting **8–14 days** had the highest observed duration-based success rate at **54.0%**.
-- Launch-month success rates varied from **36.5% in July** to **42.7% in March**, showing relatively limited seasonality.
+1. How is campaign duration associated with success?
 
-These findings represent **associations, not causal relationships**.
+1. Does the launch month show meaningful differences in success rates?
 
-### Project Structure
+---
 
-```text
+## 📊 Key Findings
+
+| Area | Finding |
+| --- | --- |
+| Funding goal | Campaigns with goals below **$1K** had a **55.1%** success rate, compared with **3.4%** for campaigns with goals of **$500K+**. |
+| Category | **Dance** had the highest observed success rate at **65.4%**, while **Technology** had the lowest at **23.8%**. |
+| Campaign duration | Campaigns lasting **8–14 days** had the highest observed duration-based success rate at **54.0%**. |
+| Launch month | Success rates ranged from **36.5% in July** to **42.7% in March**, suggesting relatively limited seasonality. |
+
+> These findings describe **associations, not causal relationships**. They show how campaign characteristics are related to success in the dataset, but they do not prove that one factor directly caused another.
+
+---
+
+## 🧩 Project Structure
+
+```
 CrowdfundSQL/
 ├── v1-sql-analysis/
 │   ├── analysis.sql
@@ -49,3 +65,32 @@ CrowdfundSQL/
 ├── v3-nl-to-sql-app/
 ├── README.md
 └── .gitignore
+```
+
+The project is organized by version so that the SQL analysis can later be extended into a reusable data pipeline and a natural-language-to-SQL application.
+
+---
+
+## 🛠️ Tools Used
+
+- **SQL** for filtering, grouping, and analyzing campaign data
+
+- **SQLite** for local database analysis
+
+- **CSV files** for raw data and exported results
+
+- **Git and GitHub** for version control and project documentation
+
+---
+
+## 🚀 Project Roadmap
+
+| Version | Focus | Status |
+| --- | --- | --- |
+| **v1** | SQL analysis of Kickstarter campaign success | ✅ Complete |
+| **v2** | Reusable data pipeline | Planned |
+| **v3** | Natural-language-to-SQL analytics application | Planned |
+
+---
+
+*Project documentation for v1 — SQL Analysis.*
